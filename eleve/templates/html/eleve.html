@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block lienCss %}
+<!-- custom css file link -->
+<link rel="stylesheet" href="{% static 'css/lstyle.css' %}">
+{% endblock %}
+{% block title %}
+
+<title>Bienvenue</title>
+
+{% endblock title %}
+
+       
+{% block body %}
+<!-- A propos des articles ... section starts -->
+	
+
+<section>
+
+   
+    <div class="table_responsive">
+
+        <h1 class="heading">Les <span>élèves</span> </h1>
+		<p> <a href="{%url 'eleve:add' %}">Ajouter eleves <i class="fas fa-add"></i></a></p>
+        <table>
+        
+    
+    <table align='center' border='2' width='50%'>
+          <thead>
+        <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Genre</th>
+        <th>Classe</th>
+        <th>Matricule</th>
+        <th>Age</th>
+        <th>Telephone</th>
+        <th>Ville</th>
+        <th>Actions</th>
+         </thead>
+        </tr>
+        
+       
+           <tr>
+            <td>KONAN</td> 
+            <td>Junior</td> 
+            <td>M</td>
+            <td>Licence</td> 
+            <td>29087654</td> 
+            <td>25</td> 
+            <td>0102456789</td>
+            <td>Abobo</td>  
+          
+            
+            <td>
+             <span class='action_btn'>
+                <a href=# style='text-decoration: none' onclick="return confirmation()">Supprimer</a>
+            
+            
+            <a href="{%url 'eleve:edit' %}" style='text-decoration: none'>Modifier</a>
+            </span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>NYOA</td> 
+            <td>Ama</td> 
+            <td>F</td>
+            <td>Master</td> 
+            <td>200514886</td> 
+            <td>22</td> 
+            <td>0102456789</td>
+            <td>Abidjan</td>  
+          
+            
+            <td>
+             <span class='action_btn'>
+            <a href=# style='text-decoration: none' onclick="return confirmation()">Supprimer</a>
+             
+
+            
+            <a href="{%url 'eleve:edit' %}" style='text-decoration: none'>Modifier</a>
+            </span>
+            </td>
+        </tr>
+        
+    </table>
+            
+            
+    
+        
+        
+    
+      </tbody>
+       
+      </div>
+            
+         
+
+
+</section>
+
+</div>
+
+	<script src={% static 'code.js' %}></script>
+	
+{% endblock body %}
+

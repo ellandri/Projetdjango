@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{%load static%}
+
+    
+ {% block lienCss %}
+    <link rel="stylesheet" href="{%static 'css/pstyle.css'%}">
+    {% endblock %}						
+
+
+
+	
+    {% block body %}
+<section>
+
+   
+    <div class="table_responsive">
+
+        <h1 class="heading">Les <span>professeurs</span> </h1>
+		<p> <a href="{% url 'professeur:add' %}">Ajouter Professeur <i class="fas fa-add"></i></a></p>
+        <table>
+        
+    
+    <table align='center' border='2' width='50%'>
+          <thead>
+        <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Matière</th>
+        <th>Vacant</th>
+        <th>Age</th>
+        <th>Telephone</th>
+        <th>Ville</th>
+        <th>Actions</th>
+         </thead>
+        </tr>
+        
+       
+           <tr>
+            <td>NDIAYE</td> 
+            <td>Gilbert</td> 
+            <td>Mathématique</td>
+            <td>oui</td> 
+            <td>45</td> 
+            <td>0123456790</td> 
+            <td>Bouaké</td>
+           
+          
+            
+            <td>
+             <span class='action_btn'>
+                <a href=# style='text-decoration: none' onclick="return confirmation()">Supprimer</a>
+            
+            
+            <a href="{% url 'professeur:edit' %}" style='text-decoration: none'>Modifier</a>
+            </span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>AGBO</td> 
+            <td>Alphonse</td> 
+            <td>Physique-chimie</td>
+            <td>non</td> 
+            <td>55</td> 
+            <td>0134567890</td> 
+            <td>Abidjan</td>
+            
+            <td>
+             <span class='action_btn'>
+            <a href=# style='text-decoration: none' onclick="return confirmation()">Supprimer</a>
+             
+
+            
+            <a href="{% url 'professeur:edit' %}"  style='text-decoration: none'>Modifier</a>
+            </span>
+            </td>
+        </tr>
+        
+    </table>
+            
+            
+    
+        
+        
+    
+      </tbody>
+       
+      </div>
+            
+         
+
+
+</section>
+
+</div>
+
+
+	<script src="code.js"></script>
+	
+	{% endblock body %}
+	
+	
+	
+
